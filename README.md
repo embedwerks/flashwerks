@@ -1,6 +1,8 @@
 # flashwerks
 the open source front-end for microcontroller programmers
 
+![screenshot](https://embedwerks.tk/images/flashwerks.png)
+
 # Features
 * Support for a variety of microcontrollers including ARM and AVR based
 * Simple and easy to use interface
