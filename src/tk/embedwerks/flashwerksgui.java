@@ -20,8 +20,11 @@ public class flashwerksgui extends javax.swing.JFrame
     /**
      * Creates new form flashwerksgui
      */
-    public flashwerksgui() {
+    public flashwerksgui()
+    {
         initComponents();
+        setResizable(false);
+        status.setEditable(false);
     }
 
     /**
@@ -44,13 +47,14 @@ public class flashwerksgui extends javax.swing.JFrame
         jLabel2 = new javax.swing.JLabel();
         selectDeviceLabel = new javax.swing.JLabel();
         deviceTypePicker = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         flashwerksLabel.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         flashwerksLabel.setText("flashwerks GUI - https://embedwerks.tk");
 
-        queryDevicesButton.setText("Query Devices");
+        queryDevicesButton.setText("Get Devices");
         queryDevicesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 queryDevicesButtonActionPerformed(evt);
@@ -75,11 +79,13 @@ public class flashwerksgui extends javax.swing.JFrame
             }
         });
 
-        versionLabel.setText("v.0.0.1-alpha ");
+        versionLabel.setText("Pre-Release");
 
-        selectDeviceLabel.setText("Select device (after query)");
+        selectDeviceLabel.setText("Select device");
 
         deviceTypePicker.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "atmega328p" }));
+
+        jLabel1.setText("https://github.com/embedwerks/flashwerks");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,7 +108,7 @@ public class flashwerksgui extends javax.swing.JFrame
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(deviceTypePicker, 0, 206, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 274, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32))
             .addGroup(layout.createSequentialGroup()
@@ -110,12 +116,13 @@ public class flashwerksgui extends javax.swing.JFrame
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(programDeviceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(versionLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)))
-                .addContainerGap())
+                        .addComponent(jLabel2)
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel1))))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(flashwerksLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -141,10 +148,11 @@ public class flashwerksgui extends javax.swing.JFrame
                         .addComponent(fileChooserButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addComponent(programDeviceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 209, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(versionLabel)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
                 .addContainerGap())
         );
 
@@ -155,6 +163,7 @@ public class flashwerksgui extends javax.swing.JFrame
         // TODO add your handling code here:
         try
         {
+            devicePicker.removeAllItems();
             String cmd = "ls /dev/tty.*";
             Process p = Runtime.getRuntime().exec(new String[]{"bash","-c",cmd});
             p.waitFor();
@@ -167,7 +176,7 @@ public class flashwerksgui extends javax.swing.JFrame
         }
         catch(Exception e)
         {
-            
+            JOptionPane.showMessageDialog(this, e.toString());
         }
         
     }//GEN-LAST:event_queryDevicesButtonActionPerformed
@@ -187,13 +196,13 @@ public class flashwerksgui extends javax.swing.JFrame
         }
         catch(Exception e)
         {
-            
+            JOptionPane.showMessageDialog(this, e.toString());
         }
 
     }//GEN-LAST:event_fileChooserButtonActionPerformed
 
     private void programDeviceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_programDeviceButtonActionPerformed
-        // TODO add your handling code here:
+
         try
         {
             int devicePickerIndex = devicePicker.getSelectedIndex();
@@ -242,7 +251,7 @@ public class flashwerksgui extends javax.swing.JFrame
         }
         catch(Exception e)
         {
-            System.out.println(e.toString());
+            JOptionPane.showMessageDialog(this, e.toString());
         }
 
     }//GEN-LAST:event_programDeviceButtonActionPerformed
@@ -287,6 +296,7 @@ public class flashwerksgui extends javax.swing.JFrame
     private javax.swing.JComboBox<String> deviceTypePicker;
     private javax.swing.JButton fileChooserButton;
     private javax.swing.JLabel flashwerksLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton programDeviceButton;

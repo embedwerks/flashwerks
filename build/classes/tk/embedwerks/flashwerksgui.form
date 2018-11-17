@@ -46,7 +46,7 @@
                       <Component id="deviceTypePicker" pref="206" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="274" max="32767" attributes="0"/>
+              <EmptySpace pref="90" max="32767" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="345" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
           </Group>
@@ -55,15 +55,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="programDeviceButton" min="-2" pref="251" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="versionLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <Component id="flashwerksLabel" min="-2" pref="490" max="-2" attributes="0"/>
@@ -95,10 +96,11 @@
                   </Group>
               </Group>
               <Component id="programDeviceButton" min="-2" pref="78" max="-2" attributes="0"/>
-              <EmptySpace pref="209" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="versionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -116,7 +118,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="queryDevicesButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Query Devices"/>
+        <Property name="text" type="java.lang.String" value="Get Devices"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="queryDevicesButtonActionPerformed"/>
@@ -165,14 +167,14 @@
     </Component>
     <Component class="javax.swing.JLabel" name="versionLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="v.0.0.1-alpha "/>
+        <Property name="text" type="java.lang.String" value="Pre-Release"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
     </Component>
     <Component class="javax.swing.JLabel" name="selectDeviceLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Select device (after query)"/>
+        <Property name="text" type="java.lang.String" value="Select device"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="deviceTypePicker">
@@ -186,6 +188,11 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="https://github.com/embedwerks/flashwerks"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
