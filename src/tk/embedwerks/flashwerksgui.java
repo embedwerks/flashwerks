@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * flashwerks GUI - the open source front-end for microcontroller programmers
  * https://embedwerks.tk
- * https://github,com/embedwerks
+ * https://github.com/embedwerks
  * @author Shravan Jambukesan
  */
 public class flashwerksgui extends javax.swing.JFrame
