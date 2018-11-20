@@ -14,7 +14,7 @@ the open source front-end for microcontroller programmers
 * Requires dependencies such as avrdude to be installed beforehand (auto-install scripts will be coming soon!)
 
 # Current status
-* Currently only supports programming of the Arduino UNO and derivaties using avrdude on macOS and Windows
+* Currently supports programming of atmega328 based boards using avrdude on macOS and Windows
 * Support for more boards and programmers is coming soon
 
 # More info
