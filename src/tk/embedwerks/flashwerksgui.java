@@ -157,7 +157,7 @@ public class flashwerksgui extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
 
     private void queryDevicesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_queryDevicesButtonActionPerformed
-        // TODO add your handling code here:
+
         try
         {
             if(System.getProperty("os.name").contains("Windows"))
@@ -179,7 +179,15 @@ public class flashwerksgui extends javax.swing.JFrame
             else
             {
                 devicePicker.removeAllItems();
-                String cmd = "ls /dev/tty.*";
+                String cmd = "";
+                if(System.getProperty("os.name").contains("Mac"))
+                {
+                    cmd = "ls /dev/tty.*";
+                }
+                else
+                {
+                    cmd = "ls /dev/tty*";
+                }
                 Process p = Runtime.getRuntime().exec(new String[]{"bash","-c", cmd});
                 p.waitFor();
                 BufferedReader buf = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -199,7 +207,7 @@ public class flashwerksgui extends javax.swing.JFrame
     }//GEN-LAST:event_queryDevicesButtonActionPerformed
 
     private void fileChooserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileChooserButtonActionPerformed
-        // TODO add your handling code here:
+
         try
         {
             final JFileChooser fc = new JFileChooser();
