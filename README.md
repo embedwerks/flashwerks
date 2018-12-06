@@ -14,9 +14,13 @@ the open source front-end for microcontroller programmers
 * Requires dependencies such as avrdude to be installed beforehand (auto-install scripts will be coming soon!)
 * Take a look at the [Wiki](https://github.com/embedwerks/flashwerks/wiki/Setup) for more info
 
-# Current status
-* Currently supports programming of atmega328 based boards using avrdude on macOS and Windows
-* Support for more boards and programmers is coming soon
+# Supported processors
+* atmega 328p
+* atmega2560
+
+# Supported programmers
+* USB to Serial (Virtual COM)
+* AVR ISP v2 (Tested with Pololu USB AVR Programmer v2)
 
 # More info
 For more info about our projects visit https://embedwerks.tk
