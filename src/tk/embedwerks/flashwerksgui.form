@@ -169,8 +169,11 @@
     <Component class="javax.swing.JComboBox" name="deviceTypePicker">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="1">
-            <StringItem index="0" value="atmega328p"/>
+          <StringArray count="4">
+            <StringItem index="0" value="atmega328p (USB to Serial)"/>
+            <StringItem index="1" value="atmega328p (AVR ISP)"/>
+            <StringItem index="2" value="atmega2560 (USB to Serial)"/>
+            <StringItem index="3" value="atmega2560 (AVR ISP)"/>
           </StringArray>
         </Property>
       </Properties>

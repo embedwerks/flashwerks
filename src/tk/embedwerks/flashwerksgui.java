@@ -84,7 +84,7 @@ public class flashwerksgui extends javax.swing.JFrame
 
         selectDeviceLabel.setText("Select device");
 
-        deviceTypePicker.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "atmega328p" }));
+        deviceTypePicker.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "atmega328p (USB to Serial)", "atmega328p (AVR ISP)", "atmega2560 (USB to Serial)", "atmega2560 (AVR ISP)" }));
 
         jLabel1.setText("https://github.com/embedwerks/flashwerks");
 
@@ -233,9 +233,9 @@ public class flashwerksgui extends javax.swing.JFrame
             String avrDudeCommand = "";
             
             /*
-            Requires you to copy the avrdude.conf from C:\Program Files (x86)\Arduino\hardware\tools\avr\etc to 
-            C:\Program Files (x86)\Arduino\hardware\tools\avr\bin
-            */
+             *  Requires you to copy the avrdude.conf from C:\Program Files (x86)\Arduino\hardware\tools\avr\etc to 
+             *  C:\Program Files (x86)\Arduino\hardware\tools\avr\bin
+             */
             if(System.getProperty("os.name").contains("Windows"))
             {
                 avrDudePath = "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\bin";
@@ -252,15 +252,34 @@ public class flashwerksgui extends javax.swing.JFrame
             System.out.println(port);
             int deviceTypeIndex = deviceTypePicker.getSelectedIndex();
             deviceType = deviceTypePicker.getItemAt(deviceTypeIndex);
-            String cmd = " -v -p " + deviceType + " -c arduino -P " + port + " -b 115200 -D -Uflash:w:" + filePath + ":i";
-            System.out.println(cmd);
+            String programmer = "";
+            String processor = "";
+            switch(deviceType)
+            {
+                case "atmega328p (USB to Serial)":
+                    programmer = "arduino";
+                    processor = "atmega328p";
+                    break;
+                case "atmega328p (AVR ISP)":
+                    programmer = "avrispv2";
+                    processor = "atmega328";
+                    break;
+                case "atmega2560 (USB to Serial)":
+                    programmer = "stk500v2";
+                    processor = "m2560";
+                    break;
+                case "atmega2560 (AVR ISP)":
+                    programmer = "avrispv2";
+                    processor = "m2560";
+                    break;
+            }
             List<String> commands = new ArrayList<String>();
             commands.add(avrDudeCommand);
             commands.add("-v");
             commands.add("-p");
-            commands.add(deviceType);
+            commands.add(processor);
             commands.add("-c");
-            commands.add("arduino");
+            commands.add(programmer);
             commands.add("-P");
             commands.add(port);
             commands.add("-b");
