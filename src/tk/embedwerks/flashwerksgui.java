@@ -51,6 +51,7 @@ public class flashwerksgui extends javax.swing.JFrame
         mcuLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("flashwerks GUI");
 
         flashwerksLabel.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         flashwerksLabel.setText("flashwerks GUI - https://embedwerks.tk");
@@ -80,7 +81,7 @@ public class flashwerksgui extends javax.swing.JFrame
             }
         });
 
-        versionLabel.setText("Pre-Release");
+        versionLabel.setText("Pre-Release 2");
 
         selectDeviceLabel.setText("Select device");
 
