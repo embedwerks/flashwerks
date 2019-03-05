@@ -1,7 +1,7 @@
 # flashwerks
 the open source front-end for microcontroller programmers
 
-![screenshot](https://embedwerks.tk/images/flashwerks.png)
+![screenshot](https://embedwerks.shravanj.com/images/flashwerks.png)
 
 # Features
 * Support for a variety of microcontrollers including ARM and AVR based
@@ -23,6 +23,6 @@ the open source front-end for microcontroller programmers
 * AVR ISP v2 (Tested with Pololu USB AVR Programmer v2)
 
 # More info
-For more info about our projects visit https://embedwerks.tk
+For more info about our projects visit https://embedwerks.shravanj.com
 
 
