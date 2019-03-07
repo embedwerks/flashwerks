@@ -5,7 +5,7 @@ import java.lang.ProcessBuilder;
 import java.util.*;
 /**
  * flashwerks GUI - the open source front-end for microcontroller programmers
- * https://embedwerks.tk
+ * https://embedwerks.shravanj.com
  * https://github.com/embedwerks
  * @author Shravan Jambukesan
  */
@@ -52,9 +52,11 @@ public class flashwerksgui extends javax.swing.JFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("flashwerks GUI");
+        setPreferredSize(new java.awt.Dimension(800, 400));
+        setResizable(false);
 
         flashwerksLabel.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        flashwerksLabel.setText("flashwerks GUI - https://embedwerks.tk");
+        flashwerksLabel.setText("flashwerks GUI - https://embedwerks.shravanj.com");
 
         queryDevicesButton.setText("Get Devices");
         queryDevicesButton.addActionListener(new java.awt.event.ActionListener() {
@@ -110,9 +112,6 @@ public class flashwerksgui extends javax.swing.JFrame
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(programDeviceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(versionLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2)
@@ -120,8 +119,10 @@ public class flashwerksgui extends javax.swing.JFrame
                         .addComponent(jLabel1)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(flashwerksLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(programDeviceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(flashwerksLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,7 +147,7 @@ public class flashwerksgui extends javax.swing.JFrame
                         .addComponent(fileChooserButton)
                         .addGap(18, 18, 18)
                         .addComponent(programDeviceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 323, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(versionLabel)
                     .addComponent(jLabel2)
