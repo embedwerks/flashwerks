@@ -25,4 +25,7 @@ the open source front-end for microcontroller programmers
 # More info
 For more info about our projects visit https://embedwerks.shravanj.com
 
+# ***UPDATES ARE COMING SOON***
+4/22/2019 - Updates and major improvements will be coming to flashwerks soon. Target date for the 1.0.0 Release is 5/31/2019. This will include improved cross-platform support by including binaries for avrdude inside of the executable folder. OpenOCD + nRF52 support for Linux is WIP, for now you can use the command line with some of the patches precompiled here: https://github.com/embedwerks/openocd_nrf52. Additional microcontrollers will be added over time, contributions are more than welcome. 
+
 
