@@ -10,9 +10,11 @@ the open source front-end for microcontroller programmers
 * Cross-platform, Java based front-end solution
 
 # Setup and running
-* Binaries are available under the [Release](https://github.com/embedwerks/flashwerks/releases) tab but you can also build and run using JDK 8+
+* Release and pre-release binaries are available under the [Release](https://github.com/embedwerks/flashwerks/releases) tab but you can also build and run using JDK 8+
+* Nightly builds are now available from https://build.shravanj.com/
 * Requires dependencies such as avrdude to be installed beforehand (auto-install scripts will be coming soon!)
 * Take a look at the [Wiki](https://github.com/embedwerks/flashwerks/wiki/Setup) for more info
+
 
 # Supported processors
 * atmega 328p
