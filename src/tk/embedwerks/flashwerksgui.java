@@ -56,7 +56,7 @@ public class flashwerksgui extends javax.swing.JFrame
         setResizable(false);
 
         flashwerksLabel.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        flashwerksLabel.setText("flashwerks GUI - https://https://embedwerks.iotaware.xyz");
+        flashwerksLabel.setText("flashwerks GUI - https://embedwerks.iotaware.xyz");
 
         queryDevicesButton.setText("Get Devices");
         queryDevicesButton.addActionListener(new java.awt.event.ActionListener() {
