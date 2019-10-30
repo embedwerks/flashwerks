@@ -32,19 +32,6 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="fileChooserButton" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
-                          <Component id="deviceTypePicker" alignment="0" min="-2" pref="206" max="-2" attributes="0"/>
-                          <Component id="queryDevicesButton" alignment="0" min="-2" pref="177" max="-2" attributes="0"/>
-                          <Component id="selectDeviceLabel" alignment="0" min="-2" pref="176" max="-2" attributes="0"/>
-                          <Component id="devicePicker" alignment="0" min="-2" pref="206" max="-2" attributes="0"/>
-                          <Component id="mcuLabel" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="29" max="32767" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="345" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <Component id="versionLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -53,11 +40,26 @@
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="programDeviceButton" min="-2" pref="251" max="-2" attributes="0"/>
-                          <Component id="flashwerksLabel" alignment="0" min="-2" pref="591" max="-2" attributes="0"/>
+                      <Component id="programDeviceButton" min="-2" pref="251" max="-2" attributes="0"/>
+                      <EmptySpace pref="422" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="flashwerksLabel" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="fileChooserButton" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
+                                  <Component id="deviceTypePicker" alignment="0" min="-2" pref="206" max="-2" attributes="0"/>
+                                  <Component id="queryDevicesButton" alignment="0" min="-2" pref="177" max="-2" attributes="0"/>
+                                  <Component id="selectDeviceLabel" alignment="0" min="-2" pref="176" max="-2" attributes="0"/>
+                                  <Component id="devicePicker" alignment="0" min="-2" pref="206" max="-2" attributes="0"/>
+                                  <Component id="mcuLabel" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="29" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="345" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -106,7 +108,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Lucida Grande" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="flashwerks GUI - https://embedwerks.shravanj.com"/>
+        <Property name="text" type="java.lang.String" value="flashwerks GUI - https://https://embedwerks.iotaware.xyz"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="queryDevicesButton">
@@ -160,7 +162,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="versionLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Pre-Release 2"/>
+        <Property name="text" type="java.lang.String" value="v1.0.0"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

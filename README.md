@@ -12,7 +12,7 @@ the open source front-end for microcontroller programmers
 # Setup and running
 * Release and pre-release binaries are available under the [Release](https://github.com/embedwerks/flashwerks/releases) tab but you can also build and run using JDK 8+
 * Nightly builds are now available from https://build.shravanj.com/
-* Requires dependencies such as avrdude to be installed beforehand (auto-install scripts will be coming soon!)
+* Install and configure dependencies like avrdude with the included scripts (instructions in the Wiki)
 * Take a look at the [Wiki](https://github.com/embedwerks/flashwerks/wiki/Setup) for more info
 
 
